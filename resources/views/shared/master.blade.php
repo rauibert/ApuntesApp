@@ -7,12 +7,19 @@
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ asset("css/main.css") }}">
 
 </head>
 <body>
-    @yield('content')
+    @include('shared.navbar')
+
+    <main>
+    
+        @yield('content')
+    </main>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    @include('shared.footer') 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 </html>
